@@ -1,7 +1,0 @@
-grape
-watermelon
-STRAWBERRY
-BLUEBERRY
-BLACKBERRY
-cherry
-GUAVA
