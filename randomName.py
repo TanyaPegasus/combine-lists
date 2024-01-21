@@ -1,4 +1,4 @@
-from mainFunctions import *
+from mainFunctions import create_list_from_file
 import random
 
 names_location = "lastNames.txt"
