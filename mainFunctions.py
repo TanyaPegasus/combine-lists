@@ -1,12 +1,10 @@
 import random
 
-# Pull the names out of the txt file and convert to list format so that the other code has something it can work with
 def create_list_from_file(filename):
     with open(filename) as file:
         create_list = [line.strip() for line in file]
     return create_list
 
-# Functions to ensure the final file will have no duplictes, and names which are uppercase and in alphabetical order
 def capitalise_names(my_list):
     uppercase_list = [name.upper() for name in my_list]
     return uppercase_list
@@ -26,8 +24,6 @@ def final_formatting(my_list):
     alphabetised = alphabetise_list(no_duplicates)
     return alphabetised
 
-# Joins together the existing namelist and the list of new names to be added and then performs the formatting functions on the cobination
-# This means there is no need to check if the new names being added are already in the list of not. Program does that for me
 def join_two_lists(list_1, list_2):
     existing_names = create_list_from_file(list_1)
     new_names = create_list_from_file(list_2)
@@ -35,13 +31,11 @@ def join_two_lists(list_1, list_2):
     formatted = final_formatting(modified_list)
     return formatted
 
-# Takes the list created at the last step and saves it back to the txt file with a new line between each name
 def save_final_list(final_list, filename):
     with open(filename, "w") as file:
         for name in final_list:
             file.write(name + "\n")
     return
-
 
 #Optional extra functions for curiosity. Only above needed for main purpose:
 
