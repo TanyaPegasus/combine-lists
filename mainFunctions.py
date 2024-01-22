@@ -1,3 +1,5 @@
+import random
+
 # Pull the names out of the txt file and convert to list format so that the other code has something it can work with
 def create_list_from_file(filename):
     with open(filename) as file:
@@ -60,3 +62,7 @@ def find_duplicates(list_1, list_2):
         if name in second_list:
             new_list.append(name)
     return new_list
+
+def get_random_name(names_list):
+    name = random.choice(names_list)
+    return name
